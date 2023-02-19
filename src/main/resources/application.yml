@@ -1,0 +1,10 @@
+#project-name: @project.name@
+#app-title: @app.title@
+#spring-version: @spring.version@
+server.port: 8090
+project.basedir: @project.basedir@
+spring.profiles.active: zookeeper
+spring:
+  redis: 
+    host: localhost
+    port: 6379
