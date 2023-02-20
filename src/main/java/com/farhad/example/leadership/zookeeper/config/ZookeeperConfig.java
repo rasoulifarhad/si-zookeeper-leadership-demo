@@ -1,4 +1,4 @@
-package com.farhad.example.zookeeper.leadership.config;
+package com.farhad.example.leadership.zookeeper.config;
 
 
 import org.apache.curator.framework.CuratorFramework;
@@ -7,17 +7,17 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
-import org.springframework.integration.metadata.MetadataStore;
+// import org.springframework.integration.metadata.MetadataStore;
 import org.springframework.integration.zookeeper.config.CuratorFrameworkFactoryBean;
 import org.springframework.integration.zookeeper.config.LeaderInitiatorFactoryBean;
 import org.springframework.integration.zookeeper.lock.ZookeeperLockRegistry;
-import org.springframework.integration.zookeeper.metadata.ZookeeperMetadataStore;
+// import org.springframework.integration.zookeeper.metadata.ZookeeperMetadataStore;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Configuration
 @Slf4j
-@Profile("zookeeper")
+@Profile("leadership-zookeeper")
 public class ZookeeperConfig {
 
     public static final String ZOOKEEPER_CLIENT_OP = "localhost:2181" ;
@@ -56,10 +56,10 @@ public class ZookeeperConfig {
                                     .setRole(ZOOKEEPER_LEADER_ROLE);
     }
 
-    @Bean
-    public MetadataStore zkStore(CuratorFramework client) {
-        return new ZookeeperMetadataStore(client);
-    } 
+    // @Bean
+    // public MetadataStore zkStore(CuratorFramework client) {
+    //     return new ZookeeperMetadataStore(client);
+    // } 
 
     @Bean
     public ZookeeperLockRegistry zookeeperLockRegistry(CuratorFramework client) {

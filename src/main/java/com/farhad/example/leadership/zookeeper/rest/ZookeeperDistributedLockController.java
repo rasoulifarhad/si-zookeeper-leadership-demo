@@ -1,4 +1,4 @@
-package com.farhad.example.zookeeper.leadership.rest;
+package com.farhad.example.leadership.zookeeper.rest;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
@@ -13,7 +13,7 @@ import org.springframework.integration.zookeeper.lock.ZookeeperLockRegistry;
 
 @RestController
 @Slf4j
-@Profile("zookeeper")
+@Profile("leadership-zookeeper")
 public class ZookeeperDistributedLockController {
     
     @Autowired

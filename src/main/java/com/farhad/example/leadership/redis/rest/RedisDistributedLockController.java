@@ -1,4 +1,4 @@
-package com.farhad.example.zookeeper.leadership.rest;
+package com.farhad.example.leadership.redis.rest;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
@@ -13,13 +13,13 @@ import org.springframework.integration.redis.util.RedisLockRegistry;
 
 @RestController
 @Slf4j
-@Profile("redis")
+@Profile("leadership-redis")
 public class RedisDistributedLockController {
     
     @Autowired
     private RedisLockRegistry  redisLockRegistry;
 
-    @GetMapping("lock//redis")
+    @GetMapping("lock/redis")
     public void tryLockRedis() {
 
         Lock lock = redisLockRegistry.obtain("redis");

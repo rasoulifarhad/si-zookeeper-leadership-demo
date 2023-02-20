@@ -1,4 +1,4 @@
-package com.farhad.example.zookeeper.leadership;
+package com.farhad.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

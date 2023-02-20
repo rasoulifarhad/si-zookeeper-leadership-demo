@@ -1,4 +1,4 @@
-package com.farhad.example.zookeeper.leadership.annotation;
+package com.farhad.example.leadership.common.annotation;
 
 import java.lang.annotation.Target;
 import java.lang.annotation.Retention;
